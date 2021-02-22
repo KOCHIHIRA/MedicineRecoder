@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCDF5656"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/QR_Reader"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/qr_reader" />
+
+    <ImageButton
+        android:id="@+id/Left_Button"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/Project_Label"
+        app:layout_constraintEnd_toStartOf="@+id/QR_Reader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/QR_Reader"
+        app:srcCompat="@drawable/left" />
+
+    <ImageButton
+        android:id="@+id/Right_Button"
+        android:layout_width="40dp"
+        android:layout_height="40sp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/QR_Reader"
+        app:layout_constraintTop_toTopOf="@+id/Left_Button"
+        app:srcCompat="@drawable/right" />
+
+    <TextView
+        android:id="@+id/Project_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="プロジェクトLIST"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QR_Reader" />
+
+    <TextView
+        android:id="@+id/NewProjectLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="プロジェクト作成"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Project_Label" />
+</androidx.constraintlayout.widget.ConstraintLayout>
